@@ -49,7 +49,7 @@
     (monger.core/connect! uri)
     (let [auth (:auth uri)]
       (when auth
-       (monger.core/authenticate (:db uri) (:user auth) (:pass auth))))
+       (monger.core/authenticate (:db uri) (:user auth) (char-array (:pass auth)))))
     (monger.core/set-db! (monger.core/get-db (:db uri)))
     (println "Connected to MongoDB at" (uri-to-loggable uri))))
 
