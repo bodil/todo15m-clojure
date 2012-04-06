@@ -58,15 +58,18 @@ li span {
 li form input {
     border: none;
     background: none;
+}
+
+li input.check, span.check {
+    color: green;
+}
+
+span.delete, span.check, li form input {
     cursor: pointer;
     font-size: 1.1em;
 }
 
-li input.check {
-    color: green;
-}
-
-li.done span {
+li.done span.todo {
     text-decoration: line-through;
 }
 
