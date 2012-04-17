@@ -10,10 +10,13 @@
 (defpage "/" []
   (html5
    [:head
-    [:title "15m Todo List"]
-    (include-css "/15m.css")]
+    [:title "My Little Cthulhu"]
+    (include-css "/screen.css")]
    [:body
-    [:h1 "15 Minute Todo List"]
+    [:h1
+     [:img {:src "/hellocthulhu-right.png"}]
+     "My Little Cthulhu"
+     [:img {:src "/hellocthulhu-left.png"}]]
     [:ul#todos]
     [:form#new (text-field "todo")]
     (cljs/include-scripts :with-jquery)]))
